@@ -1,0 +1,28 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron|Oswald|Rubik+Mono+One">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+</head>
+<body>
+<main>
+<div id="app">
+  <div id="container">
+    <div id="green" v-on:click="checkButton('green')" class="simon-button" v-bind:style="{ background: green }"></div>
+    <div id="red" v-on:click="checkButton('red')" class="simon-button" v-bind:style="{ background: red }"></div>
+    <div id="yellow" v-on:click="checkButton('yellow')" class="simon-button" v-bind:style="{ background: yellow }"></div>
+    <div id="blue" v-on:click="checkButton('blue')" class="simon-button"  v-bind:style="{ background: blue }"></div>
+    <div id="control">
+      <h2>Simon says</h2>
+      <output id="stp-count">{{counter}}</output>
+      <button v-on:click="startGame()" id="start">Start/Restart</button>
+      <label>
+          Strict
+          <input id="strict-checkbox" type="checkbox" v-model="strictEnabled">
+      </label>
+  </div></div>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+<script src="app.js"></script>
+</body>
